@@ -41,7 +41,7 @@ class Git:
         self.storage_dir = storage_dir
         self.model_name = model_name
 
-        self.git_path = self.storage_dir + '/' + model_name + '.git'
+        self.git_path = os.path.normpath(self.storage_dir + '/' + model_name + '.git')
 
         self.debug = False
         self.last_push_time = 0
